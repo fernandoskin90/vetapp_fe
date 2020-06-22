@@ -6,16 +6,20 @@
     "plugin:react/recommended"
   ],
   "globals": {
-    "document": true
+    "document": true,
+    "window": true
   },
   "plugins": ["wyze"],
   "rules": {
     "import/prefer-default-export": 0, // allow import/export
     "arrow-body-style": ["error", "as-needed"], // indentation on component body
     "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }], // allow js/jsx extensions
+    "react/jsx-props-no-spreading": 0,
     "react/no-array-index-key": 0, // allow use index as a key
     "eol-last": 0, // avoid empty line after last
     "max-len": [1, 120, 2, { "ignoreComments": true }],
-    "comma-dangle": ["error", "never"]
+    "comma-dangle": ["error", "never"],
+    "import/no-unresolved": 0,
+    "react-hooks/exhaustive-deps": 0
   }
 }
