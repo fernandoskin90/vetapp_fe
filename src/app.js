@@ -40,23 +40,21 @@ function App() {
     <Router>
       <SessionContextProvider value={userInfo}>
         <div className="app">
-          <section className="app__content">
-            <Switch>
-              <Route
-                {...routes.home}
-              >
-                <PrivatePage><Home /></PrivatePage>
-              </Route>
-              <Route
-                {...routes.login}
-              >
-                <Login />
-              </Route>
-              <Route path="*">
-                <Redirect to={routePaths.login} />
-              </Route>
-            </Switch>
-          </section>
+          <Switch>
+            <Route
+              {...routes.home}
+            >
+              <PrivatePage><Home /></PrivatePage>
+            </Route>
+            <Route
+              {...routes.login}
+            >
+              <Login />
+            </Route>
+            <Route path="*">
+              <Redirect to={routePaths.login} />
+            </Route>
+          </Switch>
         </div>
       </SessionContextProvider>
     </Router>
